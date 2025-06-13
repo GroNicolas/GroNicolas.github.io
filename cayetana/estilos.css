@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('img/fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: black;
+}
+
+header.arrancado {
+  background: #222;
+  color: white;
+  padding: 20px 0;
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 80px; /* límite de altura */
+  overflow: hidden; /* oculta si el logo sobrepasa */
+}
+
+.logo-nav img {
+  height: 50px; /* ajustá este valor si querés más chico */
+  margin-left: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+nav {
+  width: 100%;
+  max-width: 1200px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.seccion {
+  padding: 80px 20px;
+  background-color: transparent;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.titulo {
+  color: red;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  font-size: 2em;
+}
+
+/* Contenedor slider general */
+.slider-container, .slider-texto > div:first-child {
+  max-width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px black;
+}
+
+/* Imagen principal slider */
+#slider-img, #slider-nos-img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Miniaturas contenedor */
+.slider-container > div,
+.slider-texto > div:first-child > div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Miniaturas comunes */
+.slider-container > div img,
+.slider-texto > div:first-child > div img {
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+  object-fit: cover;
+  border: 2px solid transparent;
+}
+
+/* Tamaños miniaturas */
+.slider-container > div img {
+  width: 100px;
+  height: 60px;
+}
+
+.slider-texto > div:first-child > div img {
+  width: 80px;
+  height: 60px;
+}
+
+/* Hover en miniaturas */
+.slider-container > div img:hover,
+.slider-texto > div:first-child > div img:hover {
+  opacity: 1;
+}
+
+/* Miniatura activa */
+.miniatura-activa {
+  opacity: 1 !important;
+  border-color: #ff0000;
+}
+
+/* Contenedor texto nosotros */
+.texto-nos {
+  flex: 1;
+  min-width: 300px;
+  color: black;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* Contenedor flex para nosotros */
+.slider-texto {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Footer */
+footer {
+  background: #222; /* Fondo más oscuro */
+  padding: 40px 30px; /* Más espacio */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+}
+
+.logo-contacto img {
+  height: 100px;
+}
+
+.info-contacto {
+  display: flex;
+  gap: 40px;
+}
+
+.columna h3 {
+  margin-top: 0;
+  color: white;
+}
+
+.columna a, .columna p {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .info-contacto {
+    flex-direction: column;
+    gap: 20px;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
