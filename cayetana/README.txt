@@ -6,7 +6,7 @@ Este sitio fue creado como parte de un proyecto web, con HTML, CSS y JavaScript 
 
 ## 🔗 Ver el sitio online
 
-👉 [Abrir página web](https://TU_USUARIO.github.io/NOMBRE_DEL_REPOSITORIO/)  
+👉 [Abrir página web](https://gronicolas.github.io/cayetana.github.io/)  
 _Reemplazá el enlace con tu URL de GitHub Pages._
 
 ## 📁 Estructura del proyecto
