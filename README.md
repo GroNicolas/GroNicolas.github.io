@@ -4,10 +4,8 @@ Bienvenidos al sitio web oficial de **Cayetana**, un restaurante donde la tradic
 
 Este sitio fue creado como parte de un proyecto web, con HTML, CSS y JavaScript puros. Está diseñado para ser liviano, funcional y con una estética elegante.
 
-## 🔗 Ver el sitio online
+Ver el sitio online
 
-👉 [Abrir página web](https://gronicolas.github.io/cayetana.github.io/)  
-_Reemplazá el enlace con tu URL de GitHub Pages._
+ [Abrir página web](https://gronicolas.github.io/cayetana.github.io/)
 
-## 📁 Estructura del proyecto
 
