@@ -1,10 +1,16 @@
-# CAYETANA Restaurante 🍷🍽️
+# CAYETANA Restaurante
 
-Bienvenidos al sitio web oficial de **Cayetana**
+Sitio web en desarrollo para el restaurante **CAYETANA**, ubicado en la costanera de Zárate.
 
+Este proyecto incluye:
+- Navegación interactiva y responsive.
+- Galerías de degustaciones y presentación del equipo.
+- Estética personalizada con imágenes y animaciones suaves.
 
-Ver el sitio online
+🌐 **Ver sitio en vivo:**  
+👉 [https://GroNicolas.github.io/](https://GroNicolas.github.io/)
 
- [Abrir página web](https://gronicolas.github.io/cayetana.github.io/)
+---
 
+## Estructura del proyecto
 
