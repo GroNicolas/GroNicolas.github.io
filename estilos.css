@@ -202,10 +202,23 @@ footer {
   nav ul {
     display: none;
     flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+
+  nav ul.visible {
+    display: flex !important;
   }
 
   .menu-toggle {
     display: block;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
   }
 
   .slider-texto {
@@ -214,5 +227,11 @@ footer {
 
   .texto-nos {
     text-align: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
   }
 }
