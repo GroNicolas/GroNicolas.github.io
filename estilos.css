@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('/cayetana.github.io/img/fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: black;
+}
+
+header.arrancado {
+  background: #222;
+  color: white;
+  padding: 10px 20px;
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 80px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.logo-nav img {
+  height: 50px;
+  margin-left: 10px;
+  object-fit: contain;
+  display: block;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul.visible {
+  display: flex !important;
+  flex-direction: column;
+  background: #222;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  padding: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.seccion {
+  padding: 100px 20px 80px;
+  background-color: transparent;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.titulo {
+  color: red;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  font-size: 2em;
+}
+
+.logo-titulo {
+  max-width: 300px;
+  height: auto;
+}
+
+.slider-container, .slider-texto > div:first-child {
+  max-width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px black;
+}
+
+#slider-img, #slider-nos-img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.slider-container > div,
+.slider-texto > div:first-child > div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.slider-container > div img,
+.slider-texto > div:first-child > div img {
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+  object-fit: cover;
+  border: 2px solid transparent;
+}
+
+.slider-container > div img {
+  width: 100px;
+  height: 60px;
+}
+
+.slider-texto > div:first-child > div img {
+  width: 80px;
+  height: 60px;
+}
+
+.slider-container > div img:hover,
+.slider-texto > div:first-child > div img:hover {
+  opacity: 1;
+}
+
+.miniatura-activa {
+  opacity: 1 !important;
+  border-color: #ff0000;
+}
+
+.texto-nos {
+  flex: 1;
+  min-width: 300px;
+  color: black;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.slider-texto {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+footer {
+  background: #222;
+  padding: 40px 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+}
+
+.logo-contacto img {
+  height: 100px;
+}
+
+.info-contacto {
+  display: flex;
+  gap: 40px;
+}
+
+.columna h3 {
+  margin-top: 0;
+  color: white;
+}
+
+.columna a, .columna p {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .info-contacto {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+} 
