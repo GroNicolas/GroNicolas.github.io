@@ -79,5 +79,40 @@
       </div>
     </div>
   </footer>
+  <script>
+  const images = {
+    deg: [
+      'img/deg1.jpeg',
+      'img/deg2.jpeg',
+      'img/deg3.avif'
+    ],
+    nos: [
+      'img/nosotros1.jpg',
+      'img/nosotros2.webp',
+      'img/nosotros3.jpg'
+    ]
+  };
+
+  function cambiarImagen(id, index) {
+    // Cambia la imagen principal
+    const imgPrincipal = document.getElementById(`img-${id}`);
+    imgPrincipal.src = images[id][index];
+
+    // Actualiza la clase activa en miniaturas
+    const miniaturas = document.querySelectorAll(`#mini-${id} img`);
+    miniaturas.forEach((mini, i) => {
+      if (i === index) {
+        mini.classList.add('miniatura-activa');
+      } else {
+        mini.classList.remove('miniatura-activa');
+      }
+    });
+  }
+  
+  function toggleMenu() {
+    const menu = document.getElementById('nav-menu');
+    menu.classList.toggle('abierto');
+  }
+</script>
 </body>
 </html>
