@@ -17,7 +17,7 @@ header.arrancado {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
+  background: #272727;
   padding: 10px 30px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.07);
   position: relative;
@@ -27,6 +27,9 @@ header.arrancado {
 .logo-nav img {
   height: 50px;
   width: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 nav ul {
@@ -39,7 +42,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #222;
+  color: #ffffff;
   font-weight: 500;
   padding: 8px 14px;
   border-radius: 6px;
@@ -48,8 +51,8 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:focus {
-  background: #f5e6d8;
-  color: #b47b4e;
+  background: #272727;
+  color: #ffffff;
 }
 
 .menu-toggle {
@@ -58,7 +61,7 @@ nav ul li a:focus {
   cursor: pointer;
   background: none;
   border: none;
-  color: #b47b4e;
+  color: #ffffff;
   margin-left: 20px;
 }
 
@@ -69,7 +72,7 @@ nav ul li a:focus {
 
 .titulo {
   font-size: 2.2rem;
-  color: #b47b4e;
+  color: #4d4d4d;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -129,7 +132,7 @@ nav ul li a:focus {
 
 .slider-texto {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: row;
   gap: 20px;
   align-items: center;
   justify-content: center;
@@ -147,7 +150,7 @@ nav ul li a:focus {
 
 /* ------------------- Footer ------------------- */
 footer.barra.pie {
-  background: #b47b4e;
+  background: #272727;
   color: #fff;
   padding: 40px 10vw 20px 10vw;
   display: flex;
@@ -207,6 +210,8 @@ footer.barra.pie {
 
   .logo-nav img {
     height: 40px;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .menu-toggle {
@@ -221,7 +226,7 @@ footer.barra.pie {
   nav ul {
     display: none;
     flex-direction: column;
-    background: #fff;
+    background: #272727;
     position: absolute;
     top: 60px;
     right: 0;
@@ -236,7 +241,7 @@ footer.barra.pie {
   }
 
   nav ul li a {
-    color: #b47b4e;
+    color: #ffffff;
     padding: 14px 20px;
     border-radius: 0;
     border-bottom: 1px solid #f5e6d8;
@@ -268,4 +273,21 @@ footer.barra.pie {
 ::-webkit-scrollbar-thumb {
   background: #b47b4e;
   border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .slider-texto {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+#img-nos.imagen-slider {
+  width: 100%;
+  max-width: 420px;
+  max-height: 350px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  display: block;
+  margin: 0 auto 15px auto;
 }
