@@ -1,96 +1,99 @@
-/* ------------------- Reset y básicos ------------------- */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #faf7f2;
-  color: #222;
-  line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('img/fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: black;
 }
 
-/* ------------------- Header y navegación ------------------- */
 header.arrancado {
+  background: #222;
+  color: white;
+  padding: 10px 20px;
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #272727;
-  padding: 10px 30px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
-  position: relative;
-  z-index: 200;
-}
-
-.menu-logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  max-height: 80px;
+  overflow: hidden;
+  z-index: 999;
 }
 
 .logo-nav img {
   height: 50px;
-  width: auto;
+  margin-left: 10px;
+  object-fit: contain;
   display: block;
-}
-
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 500;
-  padding: 8px 14px;
-  border-radius: 6px;
-  transition: background 0.2s, color 0.2s;
-}
-
-nav ul li a:hover,
-nav ul li a:focus {
-  background: #272727;
-  color: #ffffff;
 }
 
 .menu-toggle {
   display: none;
-  font-size: 2rem;
+  font-size: 2em;
+  color: white;
   cursor: pointer;
-  background: none;
-  border: none;
-  color: #ffffff;
+  margin-right: 20px;
 }
 
-/* ------------------- Secciones principales ------------------- */
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul.visible {
+  display: flex !important;
+  flex-direction: column;
+  background: #222;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  padding: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 .seccion {
-  padding: 50px 10vw 30px 10vw;
+  padding: 100px 20px 80px;
+  background-color: transparent;
+  margin: 20px 0;
+  border-radius: 10px;
 }
 
 .titulo {
-  font-size: 2.2rem;
-  color: #4d4d4d;
-  margin-bottom: 30px;
+  color: rgb(40, 40, 40);
+  text-shadow: 2px 2px black;
   text-align: center;
+  font-size: 2em;
 }
 
 .logo-titulo {
   max-width: 300px;
-  display: block;
-  margin: 0 auto;
+  height: auto;
 }
 
-/* ------------------- Slider Degustaciones y Nosotros ------------------- */
 .slider-container,
 .slider-texto {
   margin: 0 auto;
-  max-width: 900px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -100,19 +103,66 @@ nav ul li a:focus {
 
 .imagen-slider {
   width: 100%;
-  max-width: 420px;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
-  display: block;
-  margin: 0 auto 15px auto;
+  height: 400px;
   object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.slider-container > div,
+.slider-texto > .contenedor-nos > #mini-nos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.slider-container > div img,
+.slider-texto > .contenedor-nos > #mini-nos img {
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+  object-fit: cover;
+  border: 2px solid transparent;
+}
+
+.slider-container > div img {
+  width: 100px;
+  height: 60px;
+}
+
+.slider-texto > .contenedor-nos > #mini-nos img {
+  width: 80px;
+  height: 60px;
+}
+
+.slider-container > div img:hover,
+.slider-texto > .contenedor-nos > #mini-nos img:hover {
+  opacity: 1;
+}
+
+.miniatura-activa {
+  opacity: 1 !important;
+  border-color: #000000;
+}
+
+.texto-nos {
+  flex: 1;
+  min-width: 300px;
+  color: black;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.contenedor-nos {
+  flex: 1;
 }
 
 #img-nos.imagen-slider {
   width: 100%;
-  max-width: 100%;
   height: auto;
-  max-height: 400px;
+  max-height: 500px;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.10);
@@ -120,155 +170,67 @@ nav ul li a:focus {
   margin: 0 auto 15px auto;
 }
 
-#mini-deg,
-#mini-nos {
+footer {
+  background: #222;
+  padding: 40px 30px;
   display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-#mini-deg img,
-#mini-nos img {
-  width: 60px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 6px;
-  cursor: pointer;
-  opacity: 0.7;
-  border: 2px solid transparent;
-  transition: opacity 0.2s, border 0.2s;
-}
-
-#mini-deg img.miniatura-activa,
-#mini-nos img.miniatura-activa {
-  opacity: 1;
-  border: 2px solid #b47b4e;
-}
-
-#mini-deg img:hover,
-#mini-nos img:hover {
-  opacity: 1;
-}
-
-.contenedor-nos {
-  max-width: 420px;
-  width: 100%;
-}
-
-.texto-nos {
-  max-width: 420px;
-  width: 100%;
-  font-size: 1.1rem;
-  color: #444;
-  text-align: left;
-}
-
-/* ------------------- Footer ------------------- */
-footer.barra.pie {
-  background: #272727;
-  color: #fff;
-  padding: 40px 10vw 20px 10vw;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
 }
 
 .logo-contacto img {
-  height: 60px;
-  width: auto;
-  margin-bottom: 15px;
+  height: 50px;
+  margin-left: 10px;
+  object-fit: contain;
+  display: block;
 }
 
 .info-contacto {
   display: flex;
   gap: 40px;
-  flex-wrap: wrap;
-}
-
-.columna {
-  min-width: 180px;
 }
 
 .columna h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #fff;
+  margin-top: 0;
+  color: white;
 }
 
-.columna ul {
-  list-style: none;
-  padding: 0;
-}
-
-.columna ul li {
-  margin-bottom: 8px;
-}
-
-.columna a {
-  color: #fff;
+.columna a, .columna p {
+  color: white;
   text-decoration: none;
-  transition: color 0.2s;
 }
 
-.columna a:hover {
-  color: #f5e6d8;
-}
-
-/* ------------------- Responsive Menú Hamburguesa ------------------- */
 @media (max-width: 768px) {
   header.arrancado {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 5vw;
-  }
-
-  .menu-logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
   }
 
   .logo-nav img {
     height: 40px;
   }
 
-  .menu-toggle {
-    display: block;
-    margin-top: 0;
-  }
-
-  nav {
-    width: 100%;
-  }
-
   nav ul {
     display: none;
     flex-direction: column;
-    background: #272727;
+    background: #222;
     position: absolute;
     top: 60px;
     right: 0;
     width: 200px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    z-index: 100;
-    border-radius: 0 0 10px 10px;
+    padding: 10px;
   }
 
   nav ul.visible {
-    display: flex;
+    display: flex !important;
   }
 
-  nav ul li a {
-    color: #ffffff;
-    padding: 14px 20px;
-    border-radius: 0;
-    border-bottom: 1px solid #f5e6d8;
-    background: none;
-    text-align: left;
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
   }
 
   .slider-texto {
@@ -284,7 +246,6 @@ footer.barra.pie {
 
   .texto-nos {
     font-size: 1.1em;
-    line-height: 1.6;
     margin: 0 auto;
   }
 
@@ -294,12 +255,8 @@ footer.barra.pie {
   }
 }
 
-/* ------------------- Otros detalles ------------------- */
-::-webkit-scrollbar {
-  width: 8px;
-  background: #f5e6d8;
-}
-::-webkit-scrollbar-thumb {
-  background: #b47b4e;
-  border-radius: 4px;
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
 }
