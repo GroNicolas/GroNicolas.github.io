@@ -91,14 +91,28 @@ nav ul li a:focus {
 .slider-texto {
   margin: 0 auto;
   max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
-.imagen-slider,
-#img-nos.imagen-slider {
+.imagen-slider {
   width: 100%;
   max-width: 420px;
-  max-height: 400px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  display: block;
+  margin: 0 auto 15px auto;
+  object-fit: cover;
+}
+
+#img-nos.imagen-slider {
+  width: 100%;
+  max-width: 100%;
   height: auto;
+  max-height: 400px;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.10);
@@ -135,14 +149,6 @@ nav ul li a:focus {
 #mini-deg img:hover,
 #mini-nos img:hover {
   opacity: 1;
-}
-
-.slider-texto {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
 }
 
 .contenedor-nos {
@@ -213,14 +219,17 @@ footer.barra.pie {
 /* ------------------- Responsive Menú Hamburguesa ------------------- */
 @media (max-width: 768px) {
   header.arrancado {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 5vw;
   }
 
   .menu-logo {
-    width: 100%;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
   }
 
   .logo-nav img {
@@ -229,7 +238,7 @@ footer.barra.pie {
 
   .menu-toggle {
     display: block;
-    margin-top: 5px;
+    margin-top: 0;
   }
 
   nav {
