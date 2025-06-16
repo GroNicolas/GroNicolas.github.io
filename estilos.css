@@ -24,12 +24,16 @@ header.arrancado {
   z-index: 200;
 }
 
+.menu-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .logo-nav img {
   height: 50px;
   width: auto;
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  display: block;
 }
 
 nav ul {
@@ -62,7 +66,6 @@ nav ul li a:focus {
   background: none;
   border: none;
   color: #ffffff;
-  margin-left: 20px;
 }
 
 /* ------------------- Secciones principales ------------------- */
@@ -90,9 +93,13 @@ nav ul li a:focus {
   max-width: 900px;
 }
 
-.imagen-slider {
+.imagen-slider,
+#img-nos.imagen-slider {
   width: 100%;
   max-width: 420px;
+  max-height: 400px;
+  height: auto;
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.10);
   display: block;
@@ -132,20 +139,23 @@ nav ul li a:focus {
 
 .slider-texto {
   display: flex;
-  flex-wrap: row;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: center;
   justify-content: center;
 }
 
 .contenedor-nos {
-  max-width: 50%;
+  max-width: 420px;
+  width: 100%;
 }
 
 .texto-nos {
-  max-width: 40%;
+  max-width: 420px;
+  width: 100%;
   font-size: 1.1rem;
   color: #444;
+  text-align: left;
 }
 
 /* ------------------- Footer ------------------- */
@@ -208,15 +218,18 @@ footer.barra.pie {
     padding: 10px 5vw;
   }
 
-  .logo-nav img {
-    height: 40px;
+  .menu-logo {
     width: 100%;
     justify-content: space-between;
   }
 
+  .logo-nav img {
+    height: 40px;
+  }
+
   .menu-toggle {
     display: block;
-    margin: 10px 0 0 0;
+    margin-top: 5px;
   }
 
   nav {
@@ -257,6 +270,13 @@ footer.barra.pie {
   .contenedor-nos,
   .texto-nos {
     max-width: 100%;
+    text-align: center;
+  }
+
+  .texto-nos {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 0 auto;
   }
 
   .info-contacto {
@@ -273,21 +293,4 @@ footer.barra.pie {
 ::-webkit-scrollbar-thumb {
   background: #b47b4e;
   border-radius: 4px;
-}
-@media (max-width: 768px) {
-  .slider-texto {
-    flex-direction: column;
-    gap: 30px;
-  }
-}
-#img-nos.imagen-slider {
-  width: 100%;
-  max-width: 420px;
-  max-height: 350px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
-  display: block;
-  margin: 0 auto 15px auto;
 }
